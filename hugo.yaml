@@ -21,14 +21,6 @@ languages:
             sidebar:
                 subtitle: 记录技术与生活点滴
 
-    en:
-        languageName: English   
-        title: tech-ox
-        weight: 1   
-        params:
-            sidebar:
-                subtitle: "Record the bits of technology and life"
-
 services:
     # Change it to your Disqus shortname before using
     disqus:
