@@ -82,6 +82,8 @@ public:
 
 还是动态规划，提示标签里有单调栈，先放一放
 
+![](http://cdn.cscat.cn/markdown/image-20251224145224073.png)
+
 
 
 
