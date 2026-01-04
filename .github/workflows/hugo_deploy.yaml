@@ -32,4 +32,5 @@ jobs:
               EXTERNAL_REPOSITORY: chengang9904/chengang9904.github.io
               PUBLISH_BRANCH: main
               PUBLISH_DIR: ./public
+              cname: tech-ox.com
               commit_message: auto deploy
