@@ -63,10 +63,11 @@ hugo new content/post/<post-name>/index.md
 
 **GitHub Actions** ([.github/workflows/hugo_deploy.yaml](.github/workflows/hugo_deploy.yaml)):
 - Triggers on push to `main` branch
-- Uses Hugo v0.119.0 extended
-- Builds site with `hugo -D`
+- Uses latest Hugo extended version
+- Builds site with `hugo -D` (includes drafts)
 - Deploys to external repository: `chengang9904/chengang9904.github.io`
 - Requires `secrets.token` for deployment authentication
+- **Important**: Submodules are fetched automatically during deployment (configured in workflow)
 
 ## Configuration Highlights
 
@@ -89,7 +90,12 @@ From [hugo.yaml](hugo.yaml):
 
 ## Important Notes
 
-- **Never commit** [public/](public/) directory (see [.gitignore](.gitignore))
-- **Theme updates**: Use `git submodule update --remote themes/stack`
+- **Never commit** [public/](public/) or [resources/](resources/) directories (see [.gitignore](.gitignore))
+- **Theme as git submodule**: Theme is tracked via [.gitmodules](.gitmodules), not directly committed
+  - Clone with submodules: `git clone --recurse-submodules <repo-url>`
+  - Initialize after clone: `git submodule update --init --recursive`
+  - Update theme: `git submodule update --remote themes/stack`
+  - **Never** run `git submodule add` if theme already exists (check `.gitmodules` first)
 - **Configuration**: All site settings in [hugo.yaml](hugo.yaml), not split across multiple files
 - **Content dates**: Use ISO 8601 format with timezone: `2026-01-03T15:29:50+08:00`
+- **Build lock**: [.hugo_build.lock](.hugo_build.lock) is auto-generated, should be committed

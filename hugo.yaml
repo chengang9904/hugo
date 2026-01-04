@@ -4,6 +4,11 @@ theme: stack
 title: tech-ox
 copyright: tech-ox
 
+pagination:
+  disableAliases: false
+  pagerSize: 10
+  path: page
+
 # Theme i18n support
 # Available values: ar, bn, ca, de, el, en, es, fr, hu, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
 DefaultContentLanguage: zh-cn
@@ -20,6 +25,10 @@ languages:
         params:
             sidebar:
                 subtitle: 记录技术与生活点滴
+        pagination:
+        disableAliases: false
+        pagerSize: 10
+        path: page
 
 services:
     # Change it to your Disqus shortname before using
@@ -28,9 +37,6 @@ services:
     # GA Tracking ID
     googleAnalytics:
         id:
-
-pagination:
-    pagerSize: 3
 
 permalinks:
     post: /p/:slug/
