@@ -1,6 +1,7 @@
 +++
 date = '2026-01-04T14:24:40+08:00'
-title = 'Leetcode Hot 100 240. 搜索二维矩阵 II'
+title = '240. 搜索二维矩阵 II'
+description = '中等 · 矩阵搜索 · 从右上角开始'
 categories = ['Leetcode Hot 100']
 tags = ['二分', '矩阵']
 +++

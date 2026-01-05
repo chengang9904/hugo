@@ -1,6 +1,7 @@
 +++
 date = '2026-01-05T09:05:34+08:00'
-title = 'Leetcode Hot 100 338. 比特位计数'
+title = '338. 比特位计数'
+description = '简单 · 动态规划 · 位运算技巧'
 categories = ['Leetcode Hot 100']
 tags = ['数位']
 +++

@@ -1,6 +1,7 @@
 +++
 date = '2026-01-05T09:24:31+08:00'
-title = 'Leetcode Hot 100 538. 把二叉搜索树转换为累加树'
+title = '538. 把二叉搜索树转换为累加树'
+description = '中等 · 反向中序遍历'
 categories = ['Leetcode Hot 100']
 tags = []
 +++

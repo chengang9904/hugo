@@ -1,6 +1,7 @@
 +++
 date = '2026-01-05T10:39:13+08:00'
-title = 'Leetcode Hot 100 32. 最长有效括号'
+title = '32. 最长有效括号'
+description = '困难 · 栈匹配 + 动态规划'
 categories = ['Leetcode Hot 100']
 tags = ['栈', '动态规划', '字符串']
 +++
@@ -37,4 +38,35 @@ int longestValidParentheses(std::string s) {
     }
 };
 ```
+
+## 方法二：动态规划
+
+有点过于复杂了
+
+- s[i] = ')' 且 s[i-1] = '(' 时，dp[i] = dp[i-2] + 2
+- s[i] = ')' 且 s[i-1] = ')' 时，若 s[i-dp[i-1]-1] = '('，则 dp[i] = dp[i-1] + dp[i-dp[i-1]-2] + 2
+
+还要注意俩个边界条件要排除
+```cpp
+class Solution {
+public:
+    int longestValidParentheses(string s) {
+        int maxans = 0, n = s.length();
+        vector<int> dp(n, 0);
+        for (int i = 1; i < n; i++) {
+            if (s[i] == ')') {
+                if (s[i - 1] == '(') {
+                    dp[i] = (i >= 2 ? dp[i - 2] : 0) + 2;
+                } else if (i - dp[i - 1] > 0 && s[i - dp[i - 1] - 1] == '(') {
+                    dp[i] = dp[i - 1] + ((i - dp[i - 1]) >= 2 ? dp[i - dp[i - 1] - 2] : 0) + 2;
+                }
+                maxans = max(maxans, dp[i]);
+            }
+        }
+        return maxans;
+    }
+};
+```
+
+
 

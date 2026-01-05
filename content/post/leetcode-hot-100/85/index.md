@@ -1,6 +1,7 @@
 +++
 date = '2026-01-04T10:37:02+08:00'
-title = 'Leetcode Hot 100 85. 最大矩形'
+title = '85. 最大矩形'
+description = '困难 · 动态规划 · 单调栈优化'
 categories = ['Leetcode Hot 100']
 tags = ['动态规划', '矩阵']
 +++
