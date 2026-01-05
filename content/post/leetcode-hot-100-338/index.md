@@ -2,7 +2,7 @@
 date = '2026-01-05T09:05:34+08:00'
 title = 'Leetcode Hot 100 338. 比特位计数'
 categories = ['Leetcode Hot 100']
-tags = ['']
+tags = ['数位']
 +++
 
 ## 题目
@@ -58,6 +58,10 @@ public:
 
 ## 方法三：动态规划——最高有效位
 
+$$
+(i & (i - 1)) == 0 
+f[i] = f[i - highBit] + 1
+$$
 ```cpp
 class Solution {
 public:
