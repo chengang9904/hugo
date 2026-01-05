@@ -1,7 +1,10 @@
 +++
 date = '2026-01-05T18:12:04+08:00'
-draft = true
-title = ''
+title = 'vue.js 实战：构建 TodoMVC 应用'
+draft = false
+tags = ['前端','Vue.js','实战项目']
+categories = ['前端']
+description = '本文将带你一步步构建一个完整的 TodoMVC 应用，帮助你深入理解 Vue.js 的核心概念和实战技巧。'
 +++
 
 
