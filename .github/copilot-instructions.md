@@ -39,12 +39,19 @@ Example: [content/post/chinese-test/index.zh-cn.md](content/post/chinese-test/in
 
 ## Development Workflow
 
-### Local Development
+### Local Development Commands
 ```bash
-hugo server -D  # Run dev server with drafts enabled
-hugo -D         # Build with drafts
-hugo            # Production build (no drafts)
+hugo server -D              # Run dev server (http://localhost:1313) with drafts enabled
+hugo -D                     # Build with drafts to ./public/
+hugo                        # Production build (no drafts)
+hugo new content/post/<post-name>/index.md  # Create new post from template
 ```
+
+### Building & Previewing Locally
+- Hugo watch mode is automatic when using `hugo server`
+- Drafts are hidden unless `-D` flag is used (production site only shows published=true)
+- Rebuild is fast due to incremental processing in Hugo
+- Test CNAME resolution locally by checking generated [public/CNAME](public/CNAME)
 
 ### Creating New Content
 ```bash
@@ -72,21 +79,33 @@ hugo new content/post/<post-name>/index.md
 ## Configuration Highlights
 
 From [hugo.yaml](hugo.yaml):
-- **Pagination**: 3 posts per page
+- **Pagination**: 10 posts per page (`pagerSize: 10`)
 - **Permalinks**: `/p/:slug/` for posts
-- **Main sections**: Only `post` (line 40)
-- **Sidebar avatar**: Enabled, stored at `img/avatar.png` (line 58)
-- **Math typesetting**: Disabled by default (line 64)
-- **Comments**: Disabled (line 71)
-- **Syntax highlighting**: Enabled with line numbers (line 236-243)
-- **Unsafe HTML in markdown**: Enabled (line 222)
+- **Main sections**: Only `post`
+- **Sidebar avatar**: Enabled, stored at `img/avatar.png`
+- **Math typesetting**: Enabled (`math: true`, line 69)
+- **Table of contents**: Enabled for articles (`toc: true`)
+- **Reading time**: Enabled for articles (`readingTime: true`)
+- **Comments**: Disabled (provider: disqus - unconfigured)
+- **Base URL**: `http://tech-ox.com/` (with CNAME in GitHub Pages deployment)
 
 ## Common Patterns
 
 1. **Images in posts**: Place in post directory, reference relatively: `![alt text](image.jpg)`
 2. **Draft posts**: Set `draft = true` in front matter; include with `-D` flag
 3. **Menu customization**: Add `menu` field to front matter (see [content/_index.zh-cn.md](content/_index.zh-cn.md))
-4. **Widgets**: Configured in [hugo.yaml](hugo.yaml) lines 157-172 (search, archives, categories, tag-cloud)
+4. **Widgets**: Configured in [hugo.yaml](hugo.yaml) lines 163-172 (search, archives, categories, tag-cloud)
+5. **Post structure**: Posts with multiple content files like [content/post/frontend/vue/todomvc/](content/post/frontend/vue/todomvc/) organize content hierarchically
+
+## Workflow Gotchas & Tips
+
+- **Always use `hugo server -D` during development** to preview drafts in real-time
+- **Commit `.hugo_build.lock`** - it tracks build state and improves incremental builds
+- **Don't force-edit [themes/stack/](themes/stack/)** - theme is a git submodule; create [layouts/](layouts/) overrides instead
+- **Deployment is automatic** - pushing to `main` triggers GitHub Actions, which builds and deploys to `chengang9904/chengang9904.github.io`
+- **CNAME validation** - GitHub Actions automatically creates [public/CNAME](public/CNAME) with `tech-ox.com`
+- **Draft posts still deploy** - workflow uses `hugo build` with `-D` (no flag shows drafts too). For hidden drafts, use `hugo build` without `-D`
+- **Image processing** - Enabled in [hugo.yaml](hugo.yaml) for both cover and content images; uses Hugo pipes internally
 
 ## Important Notes
 
