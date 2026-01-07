@@ -2,7 +2,7 @@
 date = '2026-01-07T11:03:59+08:00'
 draft = false
 title = '48. 旋转图像'
-category = ['Leetcode Hot 100']
+categories = ['Leetcode Hot 100']
 tags = ['数组', '矩阵操作']
 description = '中等 · 矩阵旋转'
 +++
