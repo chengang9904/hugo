@@ -4,10 +4,13 @@ draft = false
 title = '139. 单词拆分'
 tags = ['动态规划', '字符串']
 categories = ['Leetcode Hot 100']
+description = '中等 · 字符串 · 动态规划'
 +++
 
 
-## 
+## 题目 
+[139. 单词拆分](https://leetcode.cn/problems/word-break/description/?envType=problem-list-v2&envId=2cktkvj)
+[官方题解](https://leetcode.cn/problems/word-break/solutions/535599/dan-ci-chai-fen-by-leetcode-solution/?envType=problem-list-v2&envId=2cktkvj)
 
 
 ### 方法1：暴搜
