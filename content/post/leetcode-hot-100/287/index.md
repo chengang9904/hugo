@@ -4,7 +4,7 @@ draft = false
 title = '287. 寻找重复数'
 description = '中等 · 快慢指针'
 categories = ['Leetcode Hot 100']
-tags = []
+tags = ['位运算', '数组', '双指针', '二分查找']
 +++
 
 ## 题目
