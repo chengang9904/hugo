@@ -9,7 +9,7 @@ tags = ['二叉树', '递归', '前序遍历', '中序遍历']
 
 ## 题目
 
-[105. 从前序与中序遍历序列构造二叉树 ](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/?envType=problem-list-v2&envId=2cktkvj)
+[105. 从前序与中序遍历序列构造二叉树](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/?envType=problem-list-v2&envId=2cktkvj)
 [官方题解](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/solutions/535751/cong-qian-xu-yu-zhong-xu-bian-li-xu-lie-gou-zao-er-cha-shu-by-leetcode-solution/?envType=problem-list-v2&envId=2cktkvj)
 
 ## 方法一： 递归
