@@ -1,7 +1,7 @@
 +++
 date = '2026-03-04T16:43:02+08:00'
 draft = false
-title = '75'
+title = '75 . 颜色分类'
 descrption = '中等 · 数组 · 双指针'
 categories = ['Leetcode Hot 100']
 tags = ['数组', '双指针']
