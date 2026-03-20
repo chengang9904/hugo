@@ -5,7 +5,6 @@ title = '621. 任务调度器'
 categories = ['Leetcode Hot 100']
 tags = ['贪心', '优先队列']
 description = '中等 · 贪心 · 优先队列'
-title = '621'
 +++
 
 ## 题目
