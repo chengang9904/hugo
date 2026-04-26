@@ -12,8 +12,6 @@ categories:
   - 教程
 ---
 
-# Windows 下 Claude Code `/resume` 显示不全的处理方法
-
 如果你在 Windows 上使用 Claude Code，可能会遇到这样一个现象：
 
 - 正常开发对话时，内容是一点一点输出的，显示完全正常。
