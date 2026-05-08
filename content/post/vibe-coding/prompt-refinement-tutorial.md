@@ -1,16 +1,10 @@
 ---
 title: "On the Refinement of Prompts: A Tutorial Composed in the Manner of Victor Hugo"
-linkTitle: "Prompt Refinement"
-date: 2026-06-01
-lastmod: 2026-06-01
-draft: false
+date: "2026-05-08T04:12:12-06:00"
 description: "A philosophical and practical guide to refining prompts for AI language models, inspired by the style of Victor Hugo. Learn how to architect your prompts, iterate on responses, summon the adversary within, and use negative commandments to elicit deeper, more insightful answers."
-summary: "A tutorial on how to refine prompts for AI language models, structured as a series of chapters in the style of Victor Hugo. Covers the importance of specificity, the architecture of a good prompt, iterative refinement, and the use of negative commandments to improve responses."
 tags: ["AI", "Prompt Engineering", "Writing", "Victor Hugo", "Tutorial"]
-categories: ["Vibe Coding"]
+categories: ["vibe-coding"]
 ---
-
-# On the Refinement of Prompts
 
 ### _A Tutorial Composed in the Manner of Victor Hugo_
 
