@@ -13,7 +13,7 @@ tags:
   - code-agents
   - best-practices
 categories:
-  - tutorial
+  - vibe-coding
 keywords:
   - git workflow
   - code agents
@@ -28,7 +28,7 @@ TocOpen: true
 
 ## Why this guide exists
 
-Code agents change the economics of writing code: they produce diffs fast, sometimes faster than you can read them. That makes the *Git workflow around the agent* — how you isolate its work, review it, and integrate it — more important than the workflow you'd use working solo.
+Code agents change the economics of writing code: they produce diffs fast, sometimes faster than you can read them. That makes the _Git workflow around the agent_ — how you isolate its work, review it, and integrate it — more important than the workflow you'd use working solo.
 
 This tutorial walks through a practical setup: how to use branches, when worktrees help, whether you need a `dev` branch, and how to land agent-authored work on `main`.
 
@@ -45,12 +45,12 @@ Four rules that pay for themselves on every agent session:
 
 A simple, flat layout works for almost every project:
 
-| Branch              | Purpose                                                                 |
-| ------------------- | ----------------------------------------------------------------------- |
-| `main`              | Always green, deployable. Protected.                                    |
-| `feat/<short-desc>` | New feature work.                                                       |
-| `fix/<bug>`         | Bug fixes.                                                              |
-| `refactor/<area>`   | Refactors with no behavior change.                                      |
+| Branch              | Purpose                                                                  |
+| ------------------- | ------------------------------------------------------------------------ |
+| `main`              | Always green, deployable. Protected.                                     |
+| `feat/<short-desc>` | New feature work.                                                        |
+| `fix/<bug>`         | Bug fixes.                                                               |
+| `refactor/<area>`   | Refactors with no behavior change.                                       |
 | `agent/<task>`      | Optional prefix for branches an agent originated, if you want it tagged. |
 
 Naming with a prefix makes it obvious at a glance which branches are real work and which are agent-driven experiments.
@@ -106,7 +106,7 @@ Worktrees don't change the integration question — they're just a way to have m
 
 ### 1. Squash-merge — recommended default for agent work
 
-Collapse the whole feature branch into one commit on `main`. The granular checkpoint commits the agent produced were useful for *your* bisect/revert safety during development; they're noise in `main`'s history.
+Collapse the whole feature branch into one commit on `main`. The granular checkpoint commits the agent produced were useful for _your_ bisect/revert safety during development; they're noise in `main`'s history.
 
 ```bash
 git checkout main
@@ -133,7 +133,7 @@ Preserves the branch topology with an explicit merge commit. Useful when you wan
 
 ### What I'd actually do
 
-1. **Rebase your branch onto `main` *before* merging** to resolve conflicts on your branch (not in a merge commit) and ensure CI runs against the version that will actually land.
+1. **Rebase your branch onto `main` _before_ merging** to resolve conflicts on your branch (not in a merge commit) and ensure CI runs against the version that will actually land.
 2. **Then squash-merge** for features and bug fixes. One commit per PR on `main`, with a clean message.
 3. **Exception:** if a PR genuinely contains multiple independent logical changes you want preserved, either split it into multiple PRs (preferred) or rebase-merge to keep the individual commits.
 
@@ -142,7 +142,7 @@ So the combo: **rebase onto `main` to update, squash-merge to land.**
 ## Don'ts
 
 - **Don't rebase a branch someone else is working on** — including another agent in another worktree. Rebasing rewrites history; anyone with the old commits will have a bad time. Rebase is safe only on branches you own.
-- **Don't merge `main` *into* your feature branch** to "catch up." It pollutes the branch with merge commits and makes the eventual diff harder to read. Rebase onto `main` instead.
+- **Don't merge `main` _into_ your feature branch** to "catch up." It pollutes the branch with merge commits and makes the eventual diff harder to read. Rebase onto `main` instead.
 - **Don't let agents bypass pre-commit hooks** with `--no-verify`. Hooks (lint, typecheck, tests) catch a large fraction of agent slop before it commits.
 - **Don't trust the agent's PR summary over the diff.** Read the diff. Always.
 - **Don't let agents force-push shared branches.** Force-push on a private feature branch is fine; on anything anyone else touches, it's not.
