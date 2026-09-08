@@ -1,7 +1,9 @@
 +++
 date = '2026-09-08T06:18:24-07:00'
 draft = false
-title = '862'
+title = '862. 和至少为 K 的最短子数组'
+categories = ['Leetcode Hot 100']
+tags = ['前缀和', '单调队列', '滑动窗口']
 +++
 
 ## 题目
