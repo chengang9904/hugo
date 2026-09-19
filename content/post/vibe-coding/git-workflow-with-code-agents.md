@@ -20,7 +20,6 @@ keywords:
   - claude code
   - worktrees
   - rebase vs merge
-weight: 10
 toc: true
 showToc: true
 TocOpen: true
