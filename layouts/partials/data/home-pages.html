@@ -1,0 +1,8 @@
+{{- /* 首页文章列表：params.pinnedCategories 里的分类排在最前面，组内和其余文章都保持原来的排序 */ -}}
+{{- /* 首页的 .Paginate 只有第一次调用生效，所以 index.html 和 data/title.html 都要用这里的结果 */ -}}
+{{- $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections -}}
+{{- $filtered := where $pages "Params.hidden" "!=" true -}}
+{{- $pinnedCategories := .Site.Params.pinnedCategories | default slice -}}
+{{- $pinned := where $filtered "Params.categories" "intersect" $pinnedCategories -}}
+{{- $rest := $filtered | complement $pinned -}}
+{{- return ($pinned | append $rest) -}}

@@ -45,6 +45,9 @@ permalinks:
 params:
     mainSections:
         - post
+    # 首页置顶的分类，这些分类下的文章排在最前面（layouts/index.html）
+    pinnedCategories:
+        - 计算机基础
     featuredImageField: image
     rssFullContent: true
     favicon: /favicon.svg # e.g.: favicon placed in `static/favicon.ico` of your site folder, then set this field to `/favicon.ico` (`/` is necessary)
