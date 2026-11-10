@@ -1,8 +1,8 @@
-baseurl: http://tech-ox.com/
+baseurl: https://codgem.com/
 languageCode: zh-cn
 theme: stack
-title: tech-ox
-copyright: tech-ox
+title: codgem
+copyright: codgem
 
 pagination:
   disableAliases: false
@@ -20,7 +20,7 @@ hasCJKLanguage: true
 languages:
     zh-cn:
         languageName: 简体中文
-        title: tech-ox
+        title: codgem
         weight: 0
         params:
             sidebar:

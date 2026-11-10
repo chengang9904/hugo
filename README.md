@@ -1,4 +1,4 @@
-# tech-ox 个人博客
+# codgem 个人博客
 
 一个使用 Hugo 构建的多语言个人博客，支持中文、日文等多种语言，通过 GitHub Actions 自动部署。
 
@@ -225,7 +225,7 @@ $$
 
 - [Hugo 官方文档](https://gohugo.io/documentation/)
 - [Stack 主题文档](https://stack.jimmycai.com/)
-- [tech-ox 博客](https://tech-ox.com/)
+- [codgem 博客](https://codgem.com/)
 
 ## AI 开发指南
 
@@ -238,7 +238,7 @@ $$
 ---
 
 **快速链接**:
-- 博客: https://tech-ox.com
+- 博客: https://codgem.com
 - GitHub: https://github.com/chengang9904
 - 源代码仓库: https://github.com/tech-ox/tech-ox
 - 部署仓库: https://github.com/chengang9904/chengang9904.github.io

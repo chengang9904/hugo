@@ -1,4 +1,4 @@
-# tech-ox Hugo Blog - AI Agent Instructions
+# codgem Hugo Blog - AI Agent Instructions
 
 ## Architecture Overview
 
@@ -87,7 +87,7 @@ From [hugo.yaml](hugo.yaml):
 - **Table of contents**: Enabled for articles (`toc: true`)
 - **Reading time**: Enabled for articles (`readingTime: true`)
 - **Comments**: Disabled (provider: disqus - unconfigured)
-- **Base URL**: `http://tech-ox.com/` (with CNAME in GitHub Pages deployment)
+- **Base URL**: `https://codgem.com/` (with CNAME in GitHub Pages deployment)
 
 ## Common Patterns
 
@@ -103,7 +103,7 @@ From [hugo.yaml](hugo.yaml):
 - **Commit `.hugo_build.lock`** - it tracks build state and improves incremental builds
 - **Don't force-edit [themes/stack/](themes/stack/)** - theme is a git submodule; create [layouts/](layouts/) overrides instead
 - **Deployment is automatic** - pushing to `main` triggers GitHub Actions, which builds and deploys to `chengang9904/chengang9904.github.io`
-- **CNAME validation** - GitHub Actions automatically creates [public/CNAME](public/CNAME) with `tech-ox.com`
+- **CNAME validation** - GitHub Actions automatically creates [public/CNAME](public/CNAME) with `codgem.com`
 - **Draft posts still deploy** - workflow uses `hugo build` with `-D` (no flag shows drafts too). For hidden drafts, use `hugo build` without `-D`
 - **Image processing** - Enabled in [hugo.yaml](hugo.yaml) for both cover and content images; uses Hugo pipes internally
 
